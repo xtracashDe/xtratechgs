@@ -6,17 +6,17 @@ import { services } from "@/lib/services-data";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Xtratech Global Solutions — SaaS, Web, Blockchain & ICT Solutions" },
+      { title: "Xtratech Global Solutions — Fintech, Core Banking & Agency Banking" },
       {
         name: "description",
         content:
-          "Xtratech builds SaaS platforms, web apps, mobile apps, and blockchain solutions for SMEs and agencies. Engineered for scale.",
+          "Xtratech is a fintech, core banking, and agency banking solutions provider. We also build SaaS platforms, web, mobile apps, and blockchain solutions.",
       },
-      { property: "og:title", content: "Xtratech Global Solutions — Modern ICT & SaaS" },
+      { property: "og:title", content: "Xtratech — Fintech, Core Banking & Digital Products" },
       {
         property: "og:description",
         content:
-          "SaaS, web, mobile, and blockchain solutions for SMEs and agencies.",
+          "Core banking, agency banking, and digital products engineered for banks, fintechs, and ambitious businesses.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -33,14 +33,15 @@ function HomePage() {
         <div className="container-x relative grid gap-12 py-20 md:grid-cols-2 md:py-28 lg:py-32">
           <div className="flex flex-col justify-center">
             <span className="inline-flex w-fit items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-brand">
-              <Sparkles className="h-3.5 w-3.5" /> ICT · SaaS · Web3
+              <Sparkles className="h-3.5 w-3.5" /> Fintech · Core Banking · Digital Products
             </span>
             <h1 className="mt-5 text-balance text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
-              Revolutionizing <span className="bg-brand-gradient bg-clip-text text-transparent">ICT solutions</span> for SMEs &amp; agencies.
+              Powering <span className="bg-brand-gradient bg-clip-text text-transparent">fintech, core &amp; agency banking</span> across Africa.
             </h1>
             <p className="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
-              From SaaS platforms and mobile apps to blockchain solutions — we
-              engineer software that ships fast, scales hard, and earns trust.
+              We build the core banking, agency banking, and digital platforms that banks,
+              MFBs, and fintechs run on — plus the SaaS, web, and mobile products that bring
+              them to market.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
@@ -94,8 +95,8 @@ function HomePage() {
       {/* Services */}
       <Section
         eyebrow="What we do"
-        title="Software built for outcomes."
-        subtitle="Six core practices, one accountable team. We design, ship, and operate the systems your business runs on."
+        title="Two practices. One accountable team."
+        subtitle="Fintech infrastructure for banks and MFBs, and digital products for ambitious businesses — designed, shipped, and operated end to end."
       >
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
@@ -104,8 +105,13 @@ function HomePage() {
               to="/services"
               className="group rounded-2xl border border-border/60 bg-surface p-6 transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-brand"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand">
-                <s.icon className="h-6 w-6" />
+              <div className="flex items-center gap-3">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-brand/10 text-brand">
+                  <s.icon className="h-6 w-6" />
+                </div>
+                <span className="rounded-full border border-border/60 bg-background/40 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
+                  {s.category === "fintech" ? "Fintech" : "Digital"}
+                </span>
               </div>
               <h3 className="mt-5 text-lg font-semibold text-foreground">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.description}</p>
@@ -141,12 +147,12 @@ function HomePage() {
       </Section>
 
       {/* Testimonials */}
-      <Section eyebrow="What clients say" title="Trusted by founders & operators." center>
+      <Section eyebrow="What clients say" title="Trusted by banks, fintechs & founders." center>
         <div className="grid gap-5 md:grid-cols-3">
           {[
-            { q: "Xtratech rebuilt our portal in 6 weeks. Conversions up 38%.", a: "Operations Lead, Lagos fintech" },
+            { q: "Their core banking platform got our MFB live and CBN-compliant in record time.", a: "MD, Nigerian microfinance bank" },
+            { q: "The agency banking suite is rock-solid. Our agents and settlements just work.", a: "Head of Agency, Lagos fintech" },
             { q: "Senior engineering at a startup price. Easy recommendation.", a: "Founder, SaaS startup" },
-            { q: "The blockchain integration was seamless and secure. Highly recommend.", a: "CTO, DeFi platform" },
           ].map((t) => (
             <figure key={t.a} className="rounded-2xl border border-border/60 bg-surface p-6">
               <blockquote className="text-base text-foreground">“{t.q}”</blockquote>
