@@ -51,5 +51,7 @@ export const team: TeamMember[] = [
     group: "directors",
     bio: "Builds the partnerships, channels, and customer relationships that take our products to market across Africa.",
     initials: "OUJ",
+    photo: cooPhoto.url,
+
   },
 ];
