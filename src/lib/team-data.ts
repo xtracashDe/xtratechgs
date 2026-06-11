@@ -1,4 +1,6 @@
 import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
+import mdPhoto from "@/assets/managing-director.png.asset.json";
+
 
 export type TeamMember = {
   name: string;
@@ -27,6 +29,8 @@ export const team: TeamMember[] = [
     group: "directors",
     bio: "Leads our core banking and agency banking practice. Deep expertise in CBN regulations, MFB operations, and risk.",
     initials: "ANJ",
+    photo: mdPhoto.url,
+
   },
   {
     name: "Osatare C. Imaguezegie",
