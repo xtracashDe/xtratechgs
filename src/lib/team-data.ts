@@ -18,7 +18,9 @@ export const team: TeamMember[] = [
     group: "board",
     bio: "Provides strategic governance and oversight — guiding Xtratech's long-term vision across fintech and digital products.",
     initials: "MI",
+    photo: chairmanPhoto.url,
   },
+
   {
     name: "Adama N. Jeffrey",
     role: "Managing Director & Co-founder",
