@@ -1,4 +1,6 @@
 import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
+import mdPhoto from "@/assets/managing-director.png.asset.json";
+
 
 export type TeamMember = {
   name: string;
