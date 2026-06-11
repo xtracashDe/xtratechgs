@@ -1,6 +1,8 @@
 import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
 import mdPhoto from "@/assets/managing-director.png.asset.json";
 import ctoPhoto from "@/assets/director-technology.png.asset.json";
+import cooPhoto from "@/assets/director-operations.png.asset.json";
+
 
 
 
