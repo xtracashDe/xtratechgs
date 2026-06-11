@@ -1,5 +1,7 @@
 import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
 import mdPhoto from "@/assets/managing-director.png.asset.json";
+import ctoPhoto from "@/assets/director-technology.png.asset.json";
+
 
 
 export type TeamMember = {
@@ -38,6 +40,8 @@ export const team: TeamMember[] = [
     group: "directors",
     bio: "Owns engineering excellence across our platforms — architecture, security, and the delivery cadence our clients rely on.",
     initials: "OCI",
+    photo: ctoPhoto.url,
+
   },
   {
     name: "Oparaocha U. Justine",
