@@ -2,7 +2,6 @@ import {
   Cloud,
   Code2,
   Search,
-  Car,
   Boxes,
   Smartphone,
   type LucideIcon,
@@ -44,15 +43,6 @@ export const services: Service[] = [
       "Technical SEO, content strategy, and conversion-rate optimization that turns search traffic into qualified leads.",
     icon: Search,
     benefits: ["Technical audits", "Keyword research", "On-page optimization", "Reporting"],
-  },
-  {
-    slug: "vehicle-tracking",
-    title: "Vehicle Tracking",
-    tagline: "Real-time fleet visibility.",
-    description:
-      "GPS-powered vehicle tracking with live maps, geofencing, trip history, and driver reports — for fleets, logistics, and personal use.",
-    icon: Car,
-    benefits: ["Live GPS", "Geofencing", "Trip reports", "Driver alerts"],
   },
   {
     slug: "blockchain",
