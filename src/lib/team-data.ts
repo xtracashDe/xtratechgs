@@ -40,6 +40,8 @@ export const team: TeamMember[] = [
     group: "directors",
     bio: "Owns engineering excellence across our platforms — architecture, security, and the delivery cadence our clients rely on.",
     initials: "OCI",
+    photo: ctoPhoto.url,
+
   },
   {
     name: "Oparaocha U. Justine",
