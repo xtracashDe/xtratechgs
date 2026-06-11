@@ -10,13 +10,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Xtratech builds SaaS platforms, web apps, mobile apps, blockchain solutions and vehicle tracking for SMEs and agencies. Engineered for scale.",
+          "Xtratech builds SaaS platforms, web apps, mobile apps, and blockchain solutions for SMEs and agencies. Engineered for scale.",
       },
       { property: "og:title", content: "Xtratech Global Solutions — Modern ICT & SaaS" },
       {
         property: "og:description",
         content:
-          "SaaS, web, mobile, blockchain and tracking solutions for SMEs and agencies.",
+          "SaaS, web, mobile, and blockchain solutions for SMEs and agencies.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -39,7 +39,7 @@ function HomePage() {
               Revolutionizing <span className="bg-brand-gradient bg-clip-text text-transparent">ICT solutions</span> for SMEs &amp; agencies.
             </h1>
             <p className="mt-5 max-w-xl text-base text-muted-foreground md:text-lg">
-              From SaaS platforms and mobile apps to blockchain and vehicle tracking — we
+              From SaaS platforms and mobile apps to blockchain solutions — we
               engineer software that ships fast, scales hard, and earns trust.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -145,8 +145,8 @@ function HomePage() {
         <div className="grid gap-5 md:grid-cols-3">
           {[
             { q: "Xtratech rebuilt our portal in 6 weeks. Conversions up 38%.", a: "Operations Lead, Lagos fintech" },
-            { q: "Their tracking platform finally gave us real-time visibility on the fleet.", a: "Fleet Manager, logistics firm" },
             { q: "Senior engineering at a startup price. Easy recommendation.", a: "Founder, SaaS startup" },
+            { q: "The blockchain integration was seamless and secure. Highly recommend.", a: "CTO, DeFi platform" },
           ].map((t) => (
             <figure key={t.a} className="rounded-2xl border border-border/60 bg-surface p-6">
               <blockquote className="text-base text-foreground">“{t.q}”</blockquote>
