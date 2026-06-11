@@ -1,10 +1,15 @@
+import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
+
 export type TeamMember = {
   name: string;
   role: string;
   group: "board" | "directors" | "team";
   bio: string;
   initials: string;
+  photo?: string;
 };
+
+
 
 export const team: TeamMember[] = [
   {
