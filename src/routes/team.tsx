@@ -10,12 +10,12 @@ export const Route = createFileRoute("/team")({
       {
         name: "description",
         content:
-          "Meet the chairman, co-founders, and operating team behind Xtratech Global Solutions — fintech, core banking, and agency banking specialists.",
+          "Meet the chairman and co-founders behind Xtratech Global Solutions — fintech, core banking, and agency banking specialists.",
       },
       { property: "og:title", content: "Team — Xtratech Global Solutions" },
       {
         property: "og:description",
-        content: "Chairman, co-founders, and the operating team behind Xtratech.",
+        content: "Chairman and co-founders behind Xtratech.",
       },
       { property: "og:url", content: "/team" },
     ],
@@ -40,7 +40,6 @@ function TeamCard({ m }: { m: (typeof team)[number] }) {
 function TeamPage() {
   const board = team.filter((m) => m.group === "board");
   const directors = team.filter((m) => m.group === "directors");
-  const operating = team.filter((m) => m.group === "team");
 
   return (
     <>
@@ -70,14 +69,6 @@ function TeamPage() {
       <Section eyebrow="Leadership" title="Co-founders & Directors">
         <div className="grid gap-5 md:grid-cols-3">
           {directors.map((m) => (
-            <TeamCard key={m.role} m={m} />
-          ))}
-        </div>
-      </Section>
-
-      <Section eyebrow="Operations" title="Operating team">
-        <div className="grid gap-5 md:grid-cols-3">
-          {operating.map((m) => (
             <TeamCard key={m.role} m={m} />
           ))}
         </div>
