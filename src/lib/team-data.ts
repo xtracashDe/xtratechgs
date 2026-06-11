@@ -40,7 +40,7 @@ export const team: TeamMember[] = [
     name: "Osatare C. Imaguezegie",
     role: "Co-founder & Director of Technology",
     group: "directors",
-    bio: "Owns engineering excellence across our platforms — architecture, security, and the delivery cadence our clients rely on.",
+    bio: "Owns engineering excellence across our platforms ; architecture, security, and the delivery cadence our clients rely on.",
     initials: "OCI",
     photo: ctoPhoto.url,
 
