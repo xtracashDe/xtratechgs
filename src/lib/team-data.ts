@@ -1,6 +1,8 @@
 import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
 import mdPhoto from "@/assets/managing-director.png.asset.json";
 import ctoPhoto from "@/assets/director-technology.png.asset.json";
+import cooPhoto from "@/assets/director-operations.png.asset.json";
+
 
 
 
@@ -49,5 +51,7 @@ export const team: TeamMember[] = [
     group: "directors",
     bio: "Builds the partnerships, channels, and customer relationships that take our products to market across Africa.",
     initials: "OUJ",
+    photo: cooPhoto.url,
+
   },
 ];
