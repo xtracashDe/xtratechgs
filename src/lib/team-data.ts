@@ -22,7 +22,7 @@ export const team: TeamMember[] = [
     name: "McHenry Isemede",
     role: "Chairman of the Board",
     group: "board",
-    bio: "Provides strategic governance and oversight — guiding Xtratech's long-term vision across fintech and digital products.",
+    bio: "Provides strategic governance and oversight , guiding Xtratech's long-term vision across fintech and digital products.",
     initials: "MI",
     photo: chairmanPhoto.url,
   },
