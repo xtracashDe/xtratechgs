@@ -10,12 +10,12 @@ export const Route = createFileRoute("/services")({
       {
         name: "description",
         content:
-          "Explore Xtratech's services: SaaS platforms, web development, mobile apps, blockchain, SEO, and vehicle tracking — engineered for outcomes.",
+          "Explore Xtratech's services: SaaS platforms, web development, mobile apps, blockchain, and SEO — engineered for outcomes.",
       },
       { property: "og:title", content: "Services — Xtratech Global Solutions" },
       {
         property: "og:description",
-        content: "SaaS, web, mobile, blockchain, SEO, and vehicle tracking.",
+        content: "SaaS, web, mobile, blockchain, and SEO.",
       },
       { property: "og:url", content: "/services" },
     ],
@@ -33,7 +33,7 @@ function ServicesPage() {
             Services
           </span>
           <h1 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-balance md:text-5xl">
-            Six practices. One accountable team.
+            Five practices. One accountable team.
           </h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
             From idea to launch to operate — we cover the full software lifecycle so you can

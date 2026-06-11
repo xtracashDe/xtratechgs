@@ -45,7 +45,7 @@ function AboutPage() {
             Xtratech was founded on a simple idea: African businesses deserve world-class
             software, built with the same craft and rigor as anywhere else. From a single web
             project, we've grown into a full-stack ICT partner — covering SaaS platforms, web
-            and mobile apps, blockchain integrations, SEO, and vehicle tracking.
+            and mobile apps, blockchain integrations, and SEO.
           </p>
           <p className="text-base text-muted-foreground md:text-lg">
             We work the way modern product teams work: short cycles, measurable outcomes, and a

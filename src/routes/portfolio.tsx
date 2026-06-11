@@ -8,7 +8,7 @@ export const Route = createFileRoute("/portfolio")({
       {
         name: "description",
         content:
-          "Selected projects by Xtratech Global Solutions — SaaS dashboards, fintech apps, fleet tracking, and Web3 platforms.",
+          "Selected projects by Xtratech Global Solutions — SaaS dashboards, fintech apps, and Web3 platforms.",
       },
       { property: "og:title", content: "Portfolio — Xtratech Global Solutions" },
       { property: "og:description", content: "Case studies and selected work." },
@@ -27,14 +27,7 @@ const projects = [
       "KYC + onboarding flow processing 12k applications/month with bank-grade audit logging.",
     stat: "+38% completion",
   },
-  {
-    title: "Fleet tracking platform",
-    category: "Vehicle Tracking",
-    summary:
-      "Real-time GPS, geofencing, and driver scoring across 200+ vehicles for a logistics operator.",
-    stat: "200+ vehicles live",
-  },
-  {
+      {
     title: "Agency project hub",
     category: "Web App",
     summary:
