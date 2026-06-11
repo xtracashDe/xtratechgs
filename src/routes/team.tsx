@@ -27,15 +27,22 @@ export const Route = createFileRoute("/team")({
 function TeamCard({ m }: { m: (typeof team)[number] }) {
   return (
     <article className="group rounded-2xl border border-border/60 bg-surface p-6 transition-all hover:-translate-y-1 hover:border-brand/40 hover:shadow-brand">
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-gradient text-lg font-bold text-brand-foreground shadow-brand">
-        {m.initials}
-      </div>
+      {m.photo ? (
+        <div className="h-24 w-24 overflow-hidden rounded-2xl shadow-brand ring-2 ring-brand/30">
+          <img src={m.photo} alt={m.name} className="h-full w-full object-cover object-top" />
+        </div>
+      ) : (
+        <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-brand-gradient text-lg font-bold text-brand-foreground shadow-brand">
+          {m.initials}
+        </div>
+      )}
       <h3 className="mt-5 text-lg font-semibold text-foreground">{m.name}</h3>
       <p className="mt-1 text-sm font-medium text-brand">{m.role}</p>
       <p className="mt-3 text-sm text-muted-foreground">{m.bio}</p>
     </article>
   );
 }
+
 
 function TeamPage() {
   const board = team.filter((m) => m.group === "board");

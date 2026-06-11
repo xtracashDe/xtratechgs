@@ -1,10 +1,15 @@
+import chairmanPhoto from "@/assets/chairman.jpg.asset.json";
+
 export type TeamMember = {
   name: string;
   role: string;
   group: "board" | "directors" | "team";
   bio: string;
   initials: string;
+  photo?: string;
 };
+
+
 
 export const team: TeamMember[] = [
   {
@@ -13,7 +18,9 @@ export const team: TeamMember[] = [
     group: "board",
     bio: "Provides strategic governance and oversight — guiding Xtratech's long-term vision across fintech and digital products.",
     initials: "MI",
+    photo: chairmanPhoto.url,
   },
+
   {
     name: "Adama N. Jeffrey",
     role: "Managing Director & Co-founder",
