@@ -29,6 +29,8 @@ export const team: TeamMember[] = [
     group: "directors",
     bio: "Leads our core banking and agency banking practice. Deep expertise in CBN regulations, MFB operations, and risk.",
     initials: "ANJ",
+    photo: mdPhoto.url,
+
   },
   {
     name: "Osatare C. Imaguezegie",
