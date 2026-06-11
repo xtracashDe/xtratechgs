@@ -60,7 +60,7 @@ function TeamPage() {
           </h1>
           <p className="mt-5 max-w-2xl text-base text-muted-foreground md:text-lg">
             Bankers, engineers, and operators with deep experience across core banking, agency
-            banking, and digital products — accountable for every system we ship.
+            banking, and digital products ; accountable for every system we ship.
           </p>
         </div>
       </section>
