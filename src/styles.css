@@ -49,16 +49,16 @@
 :root {
   --radius: 0.75rem;
 
-  /* Dark-first brand: Xtratech red on near-black */
-  --background: oklch(0.16 0.012 264);
-  --foreground: oklch(0.98 0.003 247);
-  --surface: oklch(0.20 0.014 264);
-  --surface-elevated: oklch(0.24 0.016 264);
+  /* Light-first brand: Xtratech red on white */
+  --background: oklch(0.995 0.002 264);
+  --foreground: oklch(0.14 0.012 264);
+  --surface: oklch(0.97 0.005 264);
+  --surface-elevated: oklch(1 0 0);
 
-  --card: oklch(0.20 0.014 264);
-  --card-foreground: oklch(0.98 0.003 247);
-  --popover: oklch(0.20 0.014 264);
-  --popover-foreground: oklch(0.98 0.003 247);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.14 0.012 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.14 0.012 264);
 
   /* Brand red — matches logo */
   --brand: oklch(0.58 0.22 27);
@@ -68,40 +68,40 @@
   --primary: oklch(0.58 0.22 27);
   --primary-foreground: oklch(0.99 0.003 247);
 
-  --secondary: oklch(0.26 0.018 264);
-  --secondary-foreground: oklch(0.98 0.003 247);
-  --muted: oklch(0.26 0.018 264);
-  --muted-foreground: oklch(0.72 0.018 256);
-  --accent: oklch(0.28 0.020 264);
-  --accent-foreground: oklch(0.98 0.003 247);
+  --secondary: oklch(0.96 0.005 264);
+  --secondary-foreground: oklch(0.14 0.012 264);
+  --muted: oklch(0.94 0.005 264);
+  --muted-foreground: oklch(0.52 0.012 264);
+  --accent: oklch(0.97 0.01 27);
+  --accent-foreground: oklch(0.14 0.012 264);
   --destructive: oklch(0.62 0.24 27);
   --destructive-foreground: oklch(0.99 0.003 247);
 
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 12%);
+  --border: oklch(0 0 0 / 8%);
+  --input: oklch(0 0 0 / 12%);
   --ring: oklch(0.58 0.22 27);
 
   --whatsapp: oklch(0.68 0.17 150);
 
   --gradient-hero: radial-gradient(
       1200px 600px at 20% -10%,
-      color-mix(in oklab, var(--brand) 35%, transparent),
+      color-mix(in oklab, var(--brand) 12%, transparent),
       transparent 60%
     ),
     radial-gradient(
       900px 500px at 90% 0%,
-      color-mix(in oklab, var(--brand-glow) 22%, transparent),
+      color-mix(in oklab, var(--brand-glow) 8%, transparent),
       transparent 55%
     );
   --gradient-brand: linear-gradient(135deg, var(--brand) 0%, var(--brand-glow) 100%);
-  --shadow-brand: 0 20px 60px -20px color-mix(in oklab, var(--brand) 50%, transparent);
-  --shadow-elevated: 0 12px 40px -12px oklch(0 0 0 / 50%);
+  --shadow-brand: 0 20px 60px -20px color-mix(in oklab, var(--brand) 35%, transparent);
+  --shadow-elevated: 0 12px 40px -12px oklch(0 0 0 / 12%);
 }
 
 .dark {
-  /* Mirror :root — site is dark by design */
-  --background: oklch(0.16 0.012 264);
-  --foreground: oklch(0.98 0.003 247);
+  /* Mirror :root — site is light by design */
+  --background: oklch(0.995 0.002 264);
+  --foreground: oklch(0.14 0.012 264);
 }
 
 @layer base {
