@@ -1,8 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/xtratech-logo-dark.png";
+import { useTheme } from "@/hooks/use-theme";
+import logoLight from "@/assets/xtratech-logo-dark.png";
+import logoDark from "@/assets/xtratech-logo.png.asset.json";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {
+  const { resolvedTheme } = useTheme();
+  const logo = resolvedTheme === "dark" ? logoDark.url : logoLight;
+
   return (
     <footer className="border-t border-border/60 bg-surface mt-20">
       <div className="container-x grid gap-10 py-14 md:grid-cols-4">

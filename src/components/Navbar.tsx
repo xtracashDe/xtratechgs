@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import logo from "@/assets/xtratech-logo-dark.png";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
+import logoLight from "@/assets/xtratech-logo-dark.png";
+import logoDark from "@/assets/xtratech-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Home" },
@@ -15,6 +17,8 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const { resolvedTheme, toggleTheme } = useTheme();
+  const logo = resolvedTheme === "dark" ? logoDark.url : logoLight;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
@@ -38,7 +42,14 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          >
+            {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
           <Link
             to="/contact"
             className="inline-flex items-center justify-center rounded-md bg-brand-gradient px-4 py-2 text-sm font-semibold text-brand-foreground shadow-brand transition-transform hover:-translate-y-0.5"
@@ -47,13 +58,22 @@ export function Navbar() {
           </Link>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          className="rounded-md p-2 text-foreground md:hidden"
-          onClick={() => setOpen((s) => !s)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          >
+            {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
+          <button
+            aria-label="Toggle menu"
+            className="rounded-md p-2 text-foreground"
+            onClick={() => setOpen((s) => !s)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       {open ? (
