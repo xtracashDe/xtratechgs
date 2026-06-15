@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/xtratech-logo.png.asset.json";
+import logo from "@/assets/xtratech-logo-dark.png";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export function Footer() {

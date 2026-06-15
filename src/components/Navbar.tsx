@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/xtratech-logo.png.asset.json";
+import logo from "@/assets/xtratech-logo-dark.png";
 
 const links = [
   { to: "/", label: "Home" },
