@@ -24,7 +24,7 @@ export const services: Service[] = [
   // ───────── Fintech practice ─────────
   {
     slug: "core-banking",
-    title: "Core Banking Software",
+    title: "Core Banking Software (BaaS)",
     tagline: "The operating system for modern banks and MFBs.",
     description:
       "End-to-end core banking platform covering customer onboarding, deposits, loans, ledger, GL and regulatory reporting — built for microfinance banks, fintechs, and digital-only banks.",
