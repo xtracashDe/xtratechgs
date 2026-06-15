@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="border-t border-border/60 bg-surface mt-20">
       <div className="container-x grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <img src={logo.url} alt="Xtratech Global Solutions" className="h-10 w-auto" />
+          <img src={logo} alt="Xtratech Global Solutions" className="h-10 w-auto" />
           <p className="mt-4 max-w-md text-sm text-muted-foreground">
             Xtratech Global Solutions Limited delivers SaaS, web, mobile, blockchain and
             tracking solutions for SMEs and agencies — engineered for scale, designed for trust.
