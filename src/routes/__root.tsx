@@ -14,6 +14,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ThemeProvider } from "@/hooks/use-theme";
 import icon from "@/assets/xtratech-icon.png.asset.json";
 import { Toaster } from "@/components/ui/sonner";
 
