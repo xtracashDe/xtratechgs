@@ -58,13 +58,22 @@ export function Navbar() {
           </Link>
         </div>
 
-        <button
-          aria-label="Toggle menu"
-          className="rounded-md p-2 text-foreground md:hidden"
-          onClick={() => setOpen((s) => !s)}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+          >
+            {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
+          <button
+            aria-label="Toggle menu"
+            className="rounded-md p-2 text-foreground"
+            onClick={() => setOpen((s) => !s)}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </nav>
 
       {open ? (
