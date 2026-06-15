@@ -17,6 +17,8 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const { resolvedTheme, toggleTheme } = useTheme();
+  const logo = resolvedTheme === "dark" ? logoDark.url : logoLight;
 
   return (
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
