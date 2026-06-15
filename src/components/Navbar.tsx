@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/xtratech-logo.png.asset.json";
+import logo from "@/assets/xtratech-logo-dark.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -20,7 +20,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <nav className="container-x flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2" aria-label="Xtratech Global Solutions home">
-          <img src={logo.url} alt="Xtratech Global Solutions" className="h-9 w-auto" />
+          <img src={logo} alt="Xtratech Global Solutions" className="h-9 w-auto" />
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
