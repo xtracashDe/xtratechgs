@@ -540,19 +540,26 @@ document.getElementById('hb').addEventListener('click',function(){var m=document
 function G(id){document.getElementById('mo').style.display='none';return go(id)}
 function S(e){e.preventDefault();document.getElementById('cF').style.display='none';document.getElementById('cS').style.display='block';return false}
 
-// ANIMATION ENGINE - animates ALL sections, cards, headings on scroll
+// ANIMATION ENGINE
 function initAnim(){
-  var items=document.querySelectorAll('.s h2,.s h3,.s .lb,.s .cd,.s .wi,.s .ic,.s .ld,.s .ps,.s .isc,.s .pv,.s .fl,.s .vl,.s .ct2,.s .cn,.cb h2,.cb p,.cb .btn');
+  var sel='.s h2,.s h3,.s .lb,.s .cd,.s .wi,.s .ic,.s .ps,.s .isc,.s .pv,.s .vl,.cb h2,.cb p';
+  var items=document.querySelectorAll(sel);
+  var wh=window.innerHeight;
   items.forEach(function(el){
-    el.style.opacity='0';
-    el.style.transform='translateY(28px)';
-    el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+    if(el.dataset.an) return; // already initialized
+    el.dataset.an='1';
+    var r=el.getBoundingClientRect();
+    if(r.top>wh-30){ // only hide elements below the fold
+      el.style.opacity='0';
+      el.style.transform='translateY(24px)';
+      el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+    }
   });
-  // Stagger cards within same parent
-  document.querySelectorAll('.g3,.g4,.g2,.pg2').forEach(function(grid){
-    var children=grid.children;
-    for(var i=0;i<children.length;i++){
-      children[i].style.transitionDelay=(i*0.1)+'s';
+  // Stagger cards
+  document.querySelectorAll('.g3,.g4,.pg2').forEach(function(grid){
+    var ch=grid.children;
+    for(var i=0;i<ch.length;i++){
+      if(!ch[i].style.transitionDelay) ch[i].style.transitionDelay=(i*0.08)+'s';
     }
   });
   var ob=new IntersectionObserver(function(entries){
@@ -563,15 +570,23 @@ function initAnim(){
         ob.unobserve(e.target);
       }
     });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  items.forEach(function(el){ob.observe(el)});
+  },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
+  items.forEach(function(el){
+    var r=el.getBoundingClientRect();
+    if(r.top>wh-30) ob.observe(el);
+  });
 }
-// Run on load and after page switches
 initAnim();
 var _origGo=go;
 go=function(id){
   var r=_origGo(id);
-  setTimeout(initAnim,50);
+  setTimeout(function(){
+    // Reset animation flags for new page
+    document.querySelectorAll('[data-an]').forEach(function(el){
+      if(!el.closest('.pg.on')){el.removeAttribute('data-an');el.style.opacity='';el.style.transform='';el.style.transition='';el.style.transitionDelay=''}
+    });
+    initAnim();
+  },80);
   return r;
 };
 </script>
