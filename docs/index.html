@@ -166,8 +166,8 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
 
 /*──── LEADERS ────*/
 .ld{text-align:center;padding:20px 12px}
-.ld img{width:88px;height:88px;border-radius:50%;object-fit:cover;margin:0 auto 14px;border:3px solid var(--c-brd)}
-@media(max-width:480px){.ld img{width:72px;height:72px}}
+.ld img{width:140px;height:140px;border-radius:50%;object-fit:cover;margin:0 auto 14px;border:3px solid var(--c-brd)}
+@media(max-width:480px){.ld img{width:110px;height:110px}}
 .ld h4{font-size:.9375rem;margin-bottom:2px}.ld .rl{font-size:.8125rem;color:var(--c-m)}
 
 /*──── PROCESS ────*/
@@ -540,11 +540,40 @@ document.getElementById('hb').addEventListener('click',function(){var m=document
 function G(id){document.getElementById('mo').style.display='none';return go(id)}
 function S(e){e.preventDefault();document.getElementById('cF').style.display='none';document.getElementById('cS').style.display='block';return false}
 
-// Scroll reveal
-var ro=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');ro.unobserve(e.target)}})},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.rv,.rv-l,.rv-r,.stg').forEach(function(el){ro.observe(el)});
-// Re-observe after page switch
-var _go=go;go=function(id){var r=_go(id);setTimeout(function(){document.querySelectorAll('.rv:not(.vis),.rv-l:not(.vis),.rv-r:not(.vis),.stg:not(.vis)').forEach(function(el){ro.observe(el)})},100);return r};
+// ANIMATION ENGINE - animates ALL sections, cards, headings on scroll
+function initAnim(){
+  var items=document.querySelectorAll('.s h2,.s h3,.s .lb,.s .cd,.s .wi,.s .ic,.s .ld,.s .ps,.s .isc,.s .pv,.s .fl,.s .vl,.s .ct2,.s .cn,.cb h2,.cb p,.cb .btn');
+  items.forEach(function(el){
+    el.style.opacity='0';
+    el.style.transform='translateY(28px)';
+    el.style.transition='opacity 0.6s ease, transform 0.6s ease';
+  });
+  // Stagger cards within same parent
+  document.querySelectorAll('.g3,.g4,.g2,.pg2').forEach(function(grid){
+    var children=grid.children;
+    for(var i=0;i<children.length;i++){
+      children[i].style.transitionDelay=(i*0.1)+'s';
+    }
+  });
+  var ob=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.style.opacity='1';
+        e.target.style.transform='translateY(0)';
+        ob.unobserve(e.target);
+      }
+    });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  items.forEach(function(el){ob.observe(el)});
+}
+// Run on load and after page switches
+initAnim();
+var _origGo=go;
+go=function(id){
+  var r=_origGo(id);
+  setTimeout(initAnim,50);
+  return r;
+};
 </script>
 
 
