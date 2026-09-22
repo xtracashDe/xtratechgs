@@ -131,17 +131,28 @@ img { max-width: 100%; display: block; }
   .nr .btn { display: none; }
   .mt { display: block; }
   .nlinks.open {
-    display: flex; flex-direction: column;
+    display: flex !important; flex-direction: column;
     position: fixed; top: 64px; left: 0; right: 0; bottom: 0;
-    background-color: var(--bg); padding: 24px 20px; gap: 8px; z-index: 999;
+    background: var(--bg); padding: 24px 20px; gap: 0; z-index: 9999;
     overflow-y: auto; border-top: 1px solid var(--br);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
   }
-  .nlinks.open li { padding: 8px 0; }
-  .nlinks.open a { font-size: 1.0625rem; color: var(--tx); display: block; }
-  .nlinks.open .mcta { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--br); }
+  .nlinks.open li { padding: 0; list-style: none; }
+  .nlinks.open li a {
+    font-size: 1.125rem; color: var(--tx); display: block;
+    padding: 14px 0; border-bottom: 1px solid var(--br);
+    font-weight: 500;
+  }
+  .nlinks.open li:first-child a { padding-top: 8px; }
+  .nlinks.open .mcta { margin-top: 20px; padding-top: 8px; border-bottom: none; }
+  .nlinks.open .mcta a { border-bottom: none; padding: 0; }
   .nlinks.open .mcta .btn { width: 100%; font-size: 1rem; padding: 14px 24px; }
 }
 
+
+@media (max-width: 900px) {
+  .nav { background: var(--bg) !important; }
+}
 /* ===== HERO ===== */
 .hero {
   padding: 130px 0 88px; background-color: var(--dk); color: var(--htx);
