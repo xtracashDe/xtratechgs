@@ -310,6 +310,16 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
 .wa-tip{background:var(--c-bg);color:var(--c-h);padding:8px 14px;border-radius:20px;font-size:.8125rem;font-weight:500;box-shadow:0 2px 12px rgba(0,0,0,.1);border:1px solid var(--c-brd);white-space:nowrap;animation:fadeIn .5s ease 2s both}
 @media(max-width:480px){.wa-tip{display:none}.wa{bottom:20px;right:16px}.wa-btn{width:52px;height:52px}.wa-btn svg{width:26px;height:26px}}
 
+
+/*──── SIMPLE SCROLL ANIMATIONS ────*/
+.anim{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.anim.show{opacity:1;transform:translateY(0)}
+.anim:nth-child(2){transition-delay:.08s}
+.anim:nth-child(3){transition-delay:.16s}
+.anim:nth-child(4){transition-delay:.2s}
+.anim:nth-child(5){transition-delay:.24s}
+.anim:nth-child(6){transition-delay:.28s}
+
 /*──── PAGES ────*/
 .pg{display:none}.pg.on{display:block}
 </style>
@@ -384,15 +394,15 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
   <div class="g2" style="align-items:end;margin-bottom:40px"><div><p class="lb">What we build</p><h2>Technology for financial services and modern business.</h2></div><div><p style="color:var(--c-m)">From core banking and agency networks to SaaS platforms and mobile applications. We design, build and support the systems organisations rely on every day.</p></div></div>
   <p class="lb" style="margin-bottom:14px">Fintech &amp; Digital Finance</p>
   <div class="g3" style="margin-bottom:32px">
-    <div class="cd"><div class="ci"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><h3>Core Banking Technology</h3><p>Systems for deposits, loans, ledgers and account management for banks and financial institutions.</p><div class="cf">Banks, MFBs, Financial Institutions</div></div>
-    <div class="cd"><div class="ci"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Agency Banking</h3><p>Agent network platforms for onboarding, managing and operating field agents delivering financial services.</p><div class="cf">Banks, Fintechs, Agent Networks</div></div>
-    <div class="cd"><div class="ci"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Digital Payments</h3><p>Payment processing, bill payments, airtime, data, transfers and merchant payment solutions.</p><div class="cf">Enterprises, Merchants, Platforms</div></div>
+    <div class="cd anim"><div class="ci"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div><h3>Core Banking Technology</h3><p>Systems for deposits, loans, ledgers and account management for banks and financial institutions.</p><div class="cf">Banks, MFBs, Financial Institutions</div></div>
+    <div class="cd anim"><div class="ci"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Agency Banking</h3><p>Agent network platforms for onboarding, managing and operating field agents delivering financial services.</p><div class="cf">Banks, Fintechs, Agent Networks</div></div>
+    <div class="cd anim"><div class="ci"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Digital Payments</h3><p>Payment processing, bill payments, airtime, data, transfers and merchant payment solutions.</p><div class="cf">Enterprises, Merchants, Platforms</div></div>
   </div>
   <p class="lb" style="margin-bottom:14px">Digital Business Technology</p>
   <div class="g3">
-    <div class="cd"><div class="ci"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div><h3>SaaS &amp; Enterprise Software</h3><p>Custom platforms, business management tools and subscription software designed for scale.</p><div class="cf">Enterprises, SMEs, Startups</div></div>
-    <div class="cd"><div class="ci"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3>Web &amp; Mobile Apps</h3><p>Responsive web apps and native mobile applications built for performance and reliability.</p><div class="cf">All Industries</div></div>
-    <div class="cd"><div class="ci"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>API &amp; Integration</h3><p>Connecting payment rails, banking systems, third party services and business systems.</p><div class="cf">Banks, Fintechs, Enterprises</div></div>
+    <div class="cd anim"><div class="ci"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div><h3>SaaS &amp; Enterprise Software</h3><p>Custom platforms, business management tools and subscription software designed for scale.</p><div class="cf">Enterprises, SMEs, Startups</div></div>
+    <div class="cd anim"><div class="ci"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><h3>Web &amp; Mobile Apps</h3><p>Responsive web apps and native mobile applications built for performance and reliability.</p><div class="cf">All Industries</div></div>
+    <div class="cd anim"><div class="ci"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>API &amp; Integration</h3><p>Connecting payment rails, banking systems, third party services and business systems.</p><div class="cf">Banks, Fintechs, Enterprises</div></div>
   </div>
   <div class="tc" style="margin-top:36px"><a href="#" class="btn bo" onclick="return go('solutions')">View All Solutions</a></div>
 </div></section>
@@ -406,7 +416,7 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
 </div></div></section>
 
 <section class="s"><div class="w"><div class="tc" style="margin-bottom:40px"><p class="lb">Why Xtratech</p><h2>Built for African business realities.</h2></div>
-  <div class="g3"><div class="wi"><h4>Engineering Discipline</h4><p>Structured development with proper architecture, testing and documentation.</p></div><div class="wi"><h4>Fintech Experience</h4><p>Building payment systems, wallets, agency networks and financial technology platforms.</p></div><div class="wi"><h4>Integration First</h4><p>Systems that connect to banks, processors, identity services and existing platforms.</p></div><div class="wi"><h4>Security Conscious</h4><p>Security, data protection and system resilience built in from the start.</p></div><div class="wi"><h4>Local Market Knowledge</h4><p>Nigerian banking infrastructure, regulation, distribution and customer behaviour.</p></div><div class="wi"><h4>Long Term Support</h4><p>Continuous monitoring, maintenance and improvement after launch.</p></div></div>
+  <div class="g3"><div class="wi anim"><h4>Engineering Discipline</h4><p>Structured development with proper architecture, testing and documentation.</p></div><div class="wi anim"><h4>Fintech Experience</h4><p>Building payment systems, wallets, agency networks and financial technology platforms.</p></div><div class="wi anim"><h4>Integration First</h4><p>Systems that connect to banks, processors, identity services and existing platforms.</p></div><div class="wi anim"><h4>Security Conscious</h4><p>Security, data protection and system resilience built in from the start.</p></div><div class="wi anim"><h4>Local Market Knowledge</h4><p>Nigerian banking infrastructure, regulation, distribution and customer behaviour.</p></div><div class="wi anim"><h4>Long Term Support</h4><p>Continuous monitoring, maintenance and improvement after launch.</p></div></div>
 </div></section>
 
 <section class="s sa"><div class="w"><div class="tc" style="margin-bottom:36px"><p class="lb">How we work</p><h2>From discovery to deployment and beyond.</h2></div>
@@ -421,9 +431,9 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
 <section class="ph"><div class="w"><p class="lb">Solutions</p><h1>Technology solutions for financial services and modern business.</h1><p>We build the systems organisations depend on to operate, serve customers and grow.</p></div></section>
 <section class="s"><div class="w">
   <p class="lb">Fintech &amp; Digital Finance</p><p style="color:var(--c-m);margin-bottom:28px;max-width:560px">Technology for organisations that move money and serve financial customers.</p>
-  <div class="g3" style="margin-bottom:40px"><div class="cd"><h3>Core Banking Technology</h3><p>Accounts, deposits, loans, ledgers for banks and financial institutions.</p><div class="cf">Banks, MFBs</div></div><div class="cd"><h3>Agency Banking</h3><p>Agent network deployment, management, float and performance analytics.</p><div class="cf">Banks, Fintechs</div></div><div class="cd"><h3>Digital Payments</h3><p>Bill payments, airtime, data vending, merchant settlement and multi-channel processing.</p><div class="cf">Merchants, Enterprises</div></div><div class="cd"><h3>Wallets &amp; Virtual Accounts</h3><p>Consumer, merchant and enterprise wallets. Transfers, statements and sub-accounts.</p><div class="cf">Fintechs, Banks</div></div><div class="cd"><h3>Merchant Solutions</h3><p>POS, onboarding, settlement, analytics and loyalty for digital payments.</p><div class="cf">Retail, SMEs</div></div><div class="cd"><h3>Fintech Integration</h3><p>Connecting processors, banking APIs, identity and compliance tools.</p><div class="cf">Banks, Fintechs</div></div></div>
+  <div class="g3" style="margin-bottom:40px"><div class="cd anim"><h3>Core Banking Technology</h3><p>Accounts, deposits, loans, ledgers for banks and financial institutions.</p><div class="cf">Banks, MFBs</div></div><div class="cd anim"><h3>Agency Banking</h3><p>Agent network deployment, management, float and performance analytics.</p><div class="cf">Banks, Fintechs</div></div><div class="cd anim"><h3>Digital Payments</h3><p>Bill payments, airtime, data vending, merchant settlement and multi-channel processing.</p><div class="cf">Merchants, Enterprises</div></div><div class="cd anim"><h3>Wallets &amp; Virtual Accounts</h3><p>Consumer, merchant and enterprise wallets. Transfers, statements and sub-accounts.</p><div class="cf">Fintechs, Banks</div></div><div class="cd anim"><h3>Merchant Solutions</h3><p>POS, onboarding, settlement, analytics and loyalty for digital payments.</p><div class="cf">Retail, SMEs</div></div><div class="cd anim"><h3>Fintech Integration</h3><p>Connecting processors, banking APIs, identity and compliance tools.</p><div class="cf">Banks, Fintechs</div></div></div>
   <p class="lb">Digital Business Technology</p><p style="color:var(--c-m);margin-bottom:28px;max-width:560px">Custom software, platforms and tools for efficient operations.</p>
-  <div class="g3"><div class="cd"><h3>SaaS Development</h3><p>Multi-tenant platforms with self-service onboarding and scale.</p><div class="cf">Tech Companies, Enterprises</div></div><div class="cd"><h3>Web &amp; Mobile Apps</h3><p>Responsive web and native mobile for operations, portals and dashboards.</p><div class="cf">All Industries</div></div><div class="cd"><h3>Business Automation</h3><p>Workflow automation, document processing, reporting to reduce manual work.</p><div class="cf">Enterprises, SMEs</div></div><div class="cd"><h3>API &amp; Integration</h3><p>Connecting systems, platforms and data through reliable API architecture.</p><div class="cf">Banks, Enterprises</div></div><div class="cd"><h3>Technology Consulting</h3><p>Architecture review, roadmapping, vendor assessment and advisory.</p><div class="cf">All Industries</div></div><div class="cd"><h3>Database &amp; Infrastructure</h3><p>Database design, cloud infrastructure and performance optimisation.</p><div class="cf">Enterprises</div></div></div>
+  <div class="g3"><div class="cd anim"><h3>SaaS Development</h3><p>Multi-tenant platforms with self-service onboarding and scale.</p><div class="cf">Tech Companies, Enterprises</div></div><div class="cd anim"><h3>Web &amp; Mobile Apps</h3><p>Responsive web and native mobile for operations, portals and dashboards.</p><div class="cf">All Industries</div></div><div class="cd anim"><h3>Business Automation</h3><p>Workflow automation, document processing, reporting to reduce manual work.</p><div class="cf">Enterprises, SMEs</div></div><div class="cd anim"><h3>API &amp; Integration</h3><p>Connecting systems, platforms and data through reliable API architecture.</p><div class="cf">Banks, Enterprises</div></div><div class="cd anim"><h3>Technology Consulting</h3><p>Architecture review, roadmapping, vendor assessment and advisory.</p><div class="cf">All Industries</div></div><div class="cd anim"><h3>Database &amp; Infrastructure</h3><p>Database design, cloud infrastructure and performance optimisation.</p><div class="cf">Enterprises</div></div></div>
 </div></section>
 <section class="cb"><div class="w"><h2>Need a technology solution?</h2><p>Tell us what you are building or what problem you need to solve.</p><a href="#" class="btn br" onclick="return go('contact')">Start a Conversation</a></div></section>
 </div>
@@ -440,14 +450,14 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
 <div id="industries" class="pg">
 <section class="ph"><div class="w"><p class="lb">Industries</p><h1>Technology built for how your industry operates.</h1><p>Solutions grounded in the realities of each sector.</p></div></section>
 <section class="s"><div class="w"><div class="g2" style="gap:20px">
-  <div class="ic"><h4>Banks &amp; Financial Institutions</h4><p>Core banking, digital channels, payment processing and regulatory-compliant technology.</p></div>
-  <div class="ic"><h4>Microfinance Banks</h4><p>Affordable banking technology, agent platforms and digital services to extend reach.</p></div>
-  <div class="ic"><h4>Fintech Companies</h4><p>Infrastructure, integrations and development for payment, lending and wallet solutions.</p></div>
-  <div class="ic"><h4>Enterprises</h4><p>Custom software, automation and payment solutions for medium and large organisations.</p></div>
-  <div class="ic"><h4>Retail &amp; Merchants</h4><p>Payment acceptance, POS, customer management and digital commerce.</p></div>
-  <div class="ic"><h4>Logistics &amp; Mobility</h4><p>Tracking, fleet management, monitoring and payment integration.</p></div>
-  <div class="ic"><h4>Government &amp; Institutions</h4><p>Digital platforms, payment collection and reporting for public sector.</p></div>
-  <div class="ic"><h4>SMEs</h4><p>Business tools, payments and affordable technology for digital operations.</p></div>
+  <div class="ic anim"><h4>Banks &amp; Financial Institutions</h4><p>Core banking, digital channels, payment processing and regulatory-compliant technology.</p></div>
+  <div class="ic anim"><h4>Microfinance Banks</h4><p>Affordable banking technology, agent platforms and digital services to extend reach.</p></div>
+  <div class="ic anim"><h4>Fintech Companies</h4><p>Infrastructure, integrations and development for payment, lending and wallet solutions.</p></div>
+  <div class="ic anim"><h4>Enterprises</h4><p>Custom software, automation and payment solutions for medium and large organisations.</p></div>
+  <div class="ic anim"><h4>Retail &amp; Merchants</h4><p>Payment acceptance, POS, customer management and digital commerce.</p></div>
+  <div class="ic anim"><h4>Logistics &amp; Mobility</h4><p>Tracking, fleet management, monitoring and payment integration.</p></div>
+  <div class="ic anim"><h4>Government &amp; Institutions</h4><p>Digital platforms, payment collection and reporting for public sector.</p></div>
+  <div class="ic anim"><h4>SMEs</h4><p>Business tools, payments and affordable technology for digital operations.</p></div>
 </div></div></section></div>
 
 <!-- ══════ ABOUT ══════ -->
@@ -478,9 +488,9 @@ p{max-width:65ch}a{color:inherit;text-decoration:none}img{max-width:100%;display
 <section class="ph"><div class="w"><p class="lb">Insights</p><h1>Thinking on fintech, technology and business in Africa.</h1><p>Analysis and practical knowledge from the Xtratech team.</p></div></section>
 <section class="s"><div class="w">
   <div class="g3">
-    <div class="isc"><div class="ist">Coming Soon</div><div class="isb"><p class="tg">Fintech</p><h4>What Agency Banking Looks Like in 2026</h4><p>How agent network technology is evolving across Nigeria.</p></div></div>
-    <div class="isc"><div class="ist">Coming Soon</div><div class="isb"><p class="tg">Technology</p><h4>Building Payment Systems That Scale</h4><p>Architecture decisions for payment platform growth.</p></div></div>
-    <div class="isc"><div class="ist">Coming Soon</div><div class="isb"><p class="tg">Business</p><h4>Digital Transformation for Nigerian Enterprises</h4><p>Practical approaches to modernising operations.</p></div></div>
+    <div class="isc anim"><div class="ist">Coming Soon</div><div class="isb"><p class="tg">Fintech</p><h4>What Agency Banking Looks Like in 2026</h4><p>How agent network technology is evolving across Nigeria.</p></div></div>
+    <div class="isc anim"><div class="ist">Coming Soon</div><div class="isb"><p class="tg">Technology</p><h4>Building Payment Systems That Scale</h4><p>Architecture decisions for payment platform growth.</p></div></div>
+    <div class="isc anim"><div class="ist">Coming Soon</div><div class="isb"><p class="tg">Business</p><h4>Digital Transformation for Nigerian Enterprises</h4><p>Practical approaches to modernising operations.</p></div></div>
   </div><div class="tc" style="margin-top:36px"><p style="color:var(--c-m)">More articles coming soon.</p></div>
 </div></section></div>
 
@@ -526,55 +536,18 @@ document.getElementById('hb').addEventListener('click',function(){var m=document
 function G(id){document.getElementById('mo').style.display='none';return go(id)}
 function S(e){e.preventDefault();document.getElementById('cF').style.display='none';document.getElementById('cS').style.display='block';return false}
 
-// ANIMATION ENGINE
-function initAnim(){
-  var sel='.s h2,.s h3,.s .lb,.s .cd,.s .wi,.s .ic,.s .ps,.s .isc,.s .pv,.s .vl,.cb h2,.cb p';
-  var items=document.querySelectorAll(sel);
-  var wh=window.innerHeight;
-  items.forEach(function(el){
-    if(el.dataset.an) return; // already initialized
-    el.dataset.an='1';
-    var r=el.getBoundingClientRect();
-    if(r.top>wh-30){ // only hide elements below the fold
-      el.style.opacity='0';
-      el.style.transform='translateY(24px)';
-      el.style.transition='opacity 0.6s ease, transform 0.6s ease';
-    }
+// Simple scroll animation - adds 'show' class, never hides anything with JS
+var ao=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting) e.target.classList.add('show');
   });
-  // Stagger cards
-  document.querySelectorAll('.g3,.g4,.pg2').forEach(function(grid){
-    var ch=grid.children;
-    for(var i=0;i<ch.length;i++){
-      if(!ch[i].style.transitionDelay) ch[i].style.transitionDelay=(i*0.08)+'s';
-    }
-  });
-  var ob=new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){
-        e.target.style.opacity='1';
-        e.target.style.transform='translateY(0)';
-        ob.unobserve(e.target);
-      }
-    });
-  },{threshold:0.05,rootMargin:'0px 0px -20px 0px'});
-  items.forEach(function(el){
-    var r=el.getBoundingClientRect();
-    if(r.top>wh-30) ob.observe(el);
-  });
+},{threshold:0.1});
+function setupAnim(){
+  document.querySelectorAll('.anim').forEach(function(el){ao.observe(el)});
 }
-initAnim();
+setupAnim();
 var _origGo=go;
-go=function(id){
-  var r=_origGo(id);
-  setTimeout(function(){
-    // Reset animation flags for new page
-    document.querySelectorAll('[data-an]').forEach(function(el){
-      if(!el.closest('.pg.on')){el.removeAttribute('data-an');el.style.opacity='';el.style.transform='';el.style.transition='';el.style.transitionDelay=''}
-    });
-    initAnim();
-  },80);
-  return r;
-};
+go=function(id){var r=_origGo(id);setTimeout(setupAnim,100);return r};
 </script>
 
 
